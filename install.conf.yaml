@@ -20,7 +20,7 @@
     ~/.config/starship.toml: config/starship/starship.toml
     ~/.config/nvim: config/nvim
     ~/.ssh/config: ssh/config
-    ~/.riggreprc: riggrep/riggreprc
+    ~/.ripgreprc: ripgrep/ripgreprc
     ~/.ideavimrc: ideavim/ideavimrc
 
 - shell:
