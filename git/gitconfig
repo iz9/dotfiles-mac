@@ -1,0 +1,51 @@
+[user]
+	name = iz9
+	email = dev.iz9.l.n@gmail.com
+[core]
+	editor = nvim
+	autocrlf = input
+	fileMode = true
+	excludesfile = ~/.gitignore_global
+	pager = delta
+[init]
+	defaultBranch = master
+[color]
+	ui = true
+[pull]
+	rebase = true
+	ff = only
+[push]
+	default = current
+	autoSetupRemote = true
+[rebase]
+	autoStash = true
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	light = false
+	side-by-side = true
+	line-numbers = true
+[merge]
+	conflictstyle = diff3
+[diff]
+	colorMoved = default
+[alias]
+	st = status -sb
+	co = checkout
+	cb = checkout -b
+	cm = commit -m
+	ca = commit --amend
+	can = commit --amend --no-edit
+	br = branch
+	df = diff
+	dfs = diff --staged
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	rs = reset
+	rsh = reset --hard
+	rss = reset --soft
+	sl = stash list
+	sa = stash apply
+	ss = stash save
+	sp = stash pop
+	sshow = stash show -p

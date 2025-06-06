@@ -1,0 +1,27 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+
+- clean: ['~']
+
+- link:
+    ~/.config/wezterm: config/wezterm
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+    ~/.bashrc: bash/bashrc
+    ~/.fzf.bash: bash/fzf.bash
+    ~/.zshrc: zsh/zshrc
+    ~/.zshenv: zsh/zshenv
+    ~/.zprofile: zsh/zprofile
+    ~/.fzf.zsh: zsh/fzf.zsh
+    ~/.shell_tools_config: zsh/shell_tools_config
+    ~/.config/starship.toml: config/starship/starship.toml
+    ~/.config/nvim: config/nvim
+    ~/.ssh/config: ssh/config
+    ~/.riggreprc: riggrep/riggreprc
+    ~/.ideavimrc: ideavim/ideavimrc
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
