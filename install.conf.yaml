@@ -20,6 +20,8 @@
     ~/.config/starship.toml: config/starship/starship.toml
     ~/.config/nvim: config/nvim
     ~/.ssh/config: ssh/config
+    ~/.ssh/yc-b2b-prod.pem: ssh/yc-b2b-prod.pem
+    ~/.ssh/yc-b2b-dev-stage.pem: ssh/yc-b2b-dev-stage.pem
     ~/.ripgreprc: ripgrep/ripgreprc
     ~/.ideavimrc: ideavim/ideavimrc
 

@@ -5,3 +5,51 @@ Host *
   IdentityFile ~/.ssh/id_ed25519
   ForwardAgent no
   ServerAliveInterval 60
+
+# YC B2B connections
+
+# read mongodb connection string
+# cat /var/local/yourcoach/venv/lib/python3.11/site-packages/yourcoach/configs/config.json | grep models.db.endpoint
+# connect to server, sudo -i, and cat ...
+
+Host yc-b2b-mongo-prod
+  Hostname 10.0.14.28
+  Port 22
+  User ec2-user
+  IdentityFile ~/.ssh/yc-b2b-prod.pem
+  ProxyCommand ssh -W %h:%p -i ~/.ssh/yc-b2b-prod.pem ec2-user@35.163.26.107
+
+Host yc-b2b-back-prod
+  Hostname 10.0.24.214
+  Port 22
+  User ec2-user
+  IdentityFile ~/.ssh/yc-b2b-prod.pem
+  ProxyCommand ssh -W %h:%p -i ~/.ssh/yc-b2b-prod.pem ec2-user@35.163.26.107
+
+Host yc-b2b-mongo-stage
+  Hostname 10.0.12.46
+  Port 22
+  User ec2-user
+  IdentityFile ~/.ssh/yc-b2b-dev-stage.pem
+  ProxyCommand ssh -W %h:%p -i ~/.ssh/yc-b2b-dev-stage.pem ec2-user@35.89.5.179
+
+Host yc-b2b-back-stage
+  Hostname 10.0.30.234
+  Port 22
+  User ec2-user
+  IdentityFile ~/.ssh/yc-b2b-dev-stage.pem
+  ProxyCommand ssh -W %h:%p -i ~/.ssh/yc-b2b-dev-stage.pem ec2-user@35.89.5.179
+
+Host yc-b2b-mongo-dev
+  Hostname 10.0.14.67
+  Port 22
+  User ec2-user
+  IdentityFile ~/.ssh/yc-b2b-dev-stage.pem
+  ProxyCommand ssh -W %h:%p -i ~/.ssh/yc-b2b-dev-stage.pem ec2-user@52.42.110.185
+
+Host yc-b2b-back-dev
+  Hostname 10.0.24.131
+  Port 22
+  User ec2-user
+  IdentityFile ~/.ssh/yc-b2b-dev-stage.pem
+  ProxyCommand ssh -W %h:%p -i ~/.ssh/yc-b2b-dev-stage.pem ec2-user@52.42.110.185

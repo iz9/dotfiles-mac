@@ -46,3 +46,6 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+alias mongo-b2b-prod="ssh yc-b2b-mongo-prod -N -L 27018:localhost:27017"
+alias mongo-b2b-stage="ssh yc-b2b-mongo-stage -N -L 27020:localhost:27017"
+alias mongo-b2b-dev="ssh yc-b2b-mongo-dev -N -L 27019:localhost:27017"
